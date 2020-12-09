@@ -1,0 +1,411 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "uid",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "by",
+				"type": "address"
+			}
+		],
+		"name": "CreatePatent",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "uid",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "by",
+				"type": "address"
+			}
+		],
+		"name": "UpdatePatent",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "uid",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_decisionNumber",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_decisionDate",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_responsiblePerson",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_patentNumber",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_lawNumber",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_internationalClassificationNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "acceptPatent",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_owner",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "_inventor",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_applicantsName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_agentName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_registrationAddress",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_title",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_link",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_country",
+				"type": "string"
+			}
+		],
+		"name": "createPatent",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "uid",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "uid",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_decisionNumber",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_decisionDate",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_responsiblePerson",
+				"type": "string"
+			}
+		],
+		"name": "declinePatent",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "uid",
+				"type": "uint256"
+			}
+		],
+		"name": "getPatent",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "uid",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "applicantsName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "inventor",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "agentName",
+						"type": "string"
+					},
+					{
+						"internalType": "enum State",
+						"name": "state",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "registrationAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "link",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "country",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "patentNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "decisionNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "decisionDate",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lawNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "internationalClassificationNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "responsiblePerson",
+						"type": "string"
+					}
+				],
+				"internalType": "struct PatentAgency.Patent",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getPatents",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "uid",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "applicantsName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "inventor",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "agentName",
+						"type": "string"
+					},
+					{
+						"internalType": "enum State",
+						"name": "state",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "registrationAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "link",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "country",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "patentNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "decisionNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "decisionDate",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lawNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "internationalClassificationNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "responsiblePerson",
+						"type": "string"
+					}
+				],
+				"internalType": "struct PatentAgency.Patent[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "patentUids",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "uid",
+				"type": "uint256"
+			}
+		],
+		"name": "setExpired",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "uid",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
